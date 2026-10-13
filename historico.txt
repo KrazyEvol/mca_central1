@@ -1,0 +1,149 @@
+
+PS D:\mca_central> (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& d:\mca_central\.venv\Scripts\Activate.ps1)
+(.venv) PS D:\mca_central> 
+ *  History restored 
+
+PS D:\mca_central> (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& d:\mca_central\.venv\Scripts\Activate.ps1)
+(.venv) PS D:\mca_central> (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& d:\mca_central\.venv\Scripts\Activate.ps1)
+(.venv) PS D:\mca_central> git --version
+git : O termo 'git' não é reconhecido como nome de cmdlet, função, arquivo de script ou programa operável. Verifique a grafia do nome ou, se um 
+caminho tiver sido incluído, veja se o caminho está correto e tente novamente.
+No linha:1 caractere:1
++ git --version
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (git:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+(.venv) PS D:\mca_central> & "C:\Program Files\Git\cmd\git.exe" --version
+& : O termo 'C:\Program Files\Git\cmd\git.exe' não é reconhecido como nome de cmdlet, função, arquivo de script ou programa operável. Verifique 
+a grafia do nome ou, se um caminho tiver sido incluído, veja se o caminho está correto e tente novamente.
+No linha:1 caractere:3
++ & "C:\Program Files\Git\cmd\git.exe" --version
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Program Files\Git\cmd\git.exe:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+(.venv) PS D:\mca_central> C:\Program Files\Git\cmd\git.exe" --version   
+ *  History restored 
+   
+PS D:\mca_central> (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& d:\mca_central\.venv\Scripts\Activate.ps1)
+(.venv) PS D:\mca_central> git add .
+>> 
+(.venv) PS D:\mca_central> git config --global user.name "KrazyEvol"
+>> 
+(.venv) PS D:\mca_central> git config --global user.name "KrazyEvol"            
+(.venv) PS D:\mca_central> git config --global user.email "matheuszoio013@github.com"
+(.venv) PS D:\mca_central> git commit -m "primeiro envio"
+[main (root-commit) 345cd10] primeiro envio
+ 2 files changed, 303 insertions(+)
+ create mode 100644 central_mca.py
+ create mode 100644 listar_portas.py
+(.venv) PS D:\mca_central> git push -u origin main
+>> 
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+(.venv) PS D:\mca_central> git push -u origin main
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+(.venv) PS D:\mca_central> git remote add origin https://github.com
+(.venv) PS D:\mca_central> git push -u origin main
+fatal: repository 'https://github.com/' not found
+(.venv) PS D:\mca_central> git remote remove origin
+(.venv) PS D:\mca_central> git remote add origin https://github.com
+(.venv) PS D:\mca_central> git push -u origin main
+fatal: repository 'https://github.com/' not found
+(.venv) PS D:\mca_central> git remote remove origin 
+(.venv) PS D:\mca_central> git remote add origin https://github.com
+(.venv) PS D:\mca_central> git push -u origin main
+fatal: repository 'https://github.com/' not found
+(.venv) PS D:\mca_central> git remote add origin https://github.com
+>> 
+error: remote origin already exists.
+(.venv) PS D:\mca_central> git push -u origin main
+>> 
+fatal: repository 'https://github.com/' not found
+(.venv) PS D:\mca_central> git remote remove origin
+>> 
+(.venv) PS D:\mca_central> git remote add origin https://github.com
+>> 
+(.venv) PS D:\mca_central> git push -u origin main
+>> 
+fatal: repository 'https://github.com/' not found
+(.venv) PS D:\mca_central> git remote add origin "https://github.com"
+error: remote origin already exists.
+(.venv) PS D:\mca_central> git remote remove origin
+>> 
+(.venv) PS D:\mca_central> 
+ *  History restored 
+
+PS D:\mca_central> (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& d:\mca_central\.venv\Scripts\Activate.ps1)
+(.venv) PS D:\mca_central> git remote remove origin
+>> 
+error: No such remote: 'origin'
+(.venv) PS D:\mca_central> git push https://github.com/KrazyEvol/mca_central main
+info: please complete authentication in your browser...
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 3.88 KiB | 3.88 MiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/KrazyEvol/mca_central
+ * [new branch]      main -> main
+(.venv) PS D:\mca_central> 
+ *  History restored 
+
+PS D:\mca_central> (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& d:\mca_central\.venv\Scripts\Activate.ps1)
+(.venv) PS D:\mca_central> git push https://github.com main
+>> 
+fatal: repository 'https://github.com/' not found
+(.venv) PS D:\mca_central> 
+
+
+
+PS D:\mca_central> (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& d:\mca_central\.venv\Scripts\Activate.ps1)
+(.venv) PS D:\mca_central> pip install pyserial
+Collecting pyserial
+  Using cached pyserial-3.5-py2.py3-none-any.whl.metadata (1.6 kB)
+Using cached pyserial-3.5-py2.py3-none-any.whl (90 kB)
+Installing collected packages: pyserial
+Successfully installed pyserial-3.5
+
+[notice] A new release of pip is available: 25.3 -> 26.2.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(.venv) PS D:\mca_central> python listar_portas.py
+(.venv) PS D:\mca_central> python listar_portas.py
+(.venv) PS D:\mca_central> 
+ *  History restored 
+
+PS D:\mca_central> (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& d:\mca_central\.venv\Scripts\Activate.ps1)
+(.venv) PS D:\mca_central> 
+ *  History restored 
+
+PS D:\mca_central> (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& d:\mca_central\.venv\Scripts\Activate.ps1)
+(.venv) PS D:\mca_central> (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& d:\mca_central\.venv\Scripts\Activate.ps1)
+(.venv) PS D:\mca_central> 
+ *  History restored 
+
+PS D:\mca_central> (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& d:\mca_central\.venv\Scripts\Activate.ps1)
+(.venv) PS D:\mca_central> 
+ *  History restored 
+
+PS D:\mca_central> (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& d:\mca_central\.venv\Scripts\Activate.ps1)
+(.venv) PS D:\mca_central> 
+ *  History restored 
+
+PS D:\mca_central> (Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned) ; (& d:\mca_central\.venv\Scripts\Activate.ps1)
+(.venv) PS D:\mca_central> 
+
+
+
+
+
+    
