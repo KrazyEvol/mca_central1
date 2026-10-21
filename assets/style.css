@@ -89,3 +89,29 @@ body { margin: 0; background: var(--bg); color: var(--texto); font-family: "Sego
 
 .painel { padding: 8px 12px; background: var(--painel); border: 1px solid var(--borda); border-radius: 4px; }
 .nota { margin-top: 12px; font-size: 11px; line-height: 1.6; color: var(--texto-2); }
+
+/* ---------- Histórico e GPS ---------- */
+.grade-indicadores { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 12px; }
+.indicador { padding: 12px 14px; background: var(--painel); border: 1px solid var(--borda); border-radius: 4px; }
+.ind-titulo { font-size: 13px; color: var(--texto-2); }
+.ind-valor { margin-top: 6px; font-size: 34px; font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.ind-valor.alerta { color: var(--alerta); }
+.ind-valor.cobre { color: var(--cobre); }
+
+.grade-graficos { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 12px; margin-bottom: 12px; }
+.mapa { height: calc(100vh - 300px); min-height: 520px; }
+
+.tabela-wrap { overflow: auto; max-height: 60vh; }
+.tabela-wrap .vazio { margin: 0; border: none; }
+.tabela { width: 100%; border-collapse: collapse; font-size: 13px; }
+.tabela th { position: sticky; top: 0; background: var(--painel); text-align: left; padding: 8px 12px; font-size: 12px; font-weight: 600; color: var(--texto-2); border-bottom: 1px solid var(--borda); }
+.tabela td { padding: 8px 12px; border-bottom: 1px solid var(--borda); }
+.tabela tbody tr:last-child td { border-bottom: none; }
+.tabela tbody tr:hover { background: var(--painel-2); }
+.tabela .num { white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+.sev { display: inline-flex; align-items: center; gap: 6px; }
+.sev::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--neutro); }
+.sev-alerta { color: var(--alerta); }
+.sev-alerta::before { background: var(--alerta); }
+.sev-info::before { background: var(--cobre); }

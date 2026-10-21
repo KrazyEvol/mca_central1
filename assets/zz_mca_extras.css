@@ -1,0 +1,72 @@
+/* Estilos NOVOS (arquivo separado, não mexe no seu CSS atual).
+   O prefixo "zz_" faz o Dash carregar este arquivo por último. */
+
+/* ---- Gráficos abertos no Painel principal ---- */
+.g-abertos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+.g-abertos > .vazio { grid-column: 1 / -1; }
+.g-painel { min-width: 0; }
+.g-topo { display: flex; justify-content: flex-end; padding: 6px 8px 0; }
+
+/* ---- Botões ---- */
+.botao-acao, .botao-mini {
+  background: #1C222B;
+  color: #E6E8EB;
+  border: 1px solid #262D38;
+  border-radius: 4px;
+  cursor: pointer;
+  font: inherit;
+}
+.botao-acao { padding: 8px 14px; font-size: 13px; }
+.botao-mini { padding: 3px 10px; font-size: 12px; color: #8B95A3; }
+.botao-acao:hover, .botao-mini:hover { border-color: #D98B55; color: #E6E8EB; }
+.h-botoes { display: flex; gap: 8px; }
+
+/* ---- Histórico: gráficos estreitos à esquerda, registro à direita ---- */
+.h-grade {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 16px;
+  align-items: stretch;          /* as duas colunas ficam com a mesma altura */
+}
+.h-graficos { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+
+/* Registro detalhado: a altura vem dos gráficos, não da tabela */
+.h-registro {
+  min-width: 0;
+  position: relative;
+  contain: size;                 /* ignora o tamanho do conteúdo ao calcular a altura */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0;
+}
+.h-registro-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+  flex: none;
+}
+
+/* A tabela ocupa o espaço que sobra e rola por dentro */
+.h-tabela-rolavel {
+  flex: 1;
+  min-height: 0;
+  max-height: none;
+  overflow: auto;
+}
+.h-registro .nota { flex: none; margin-top: 8px; }
+
+/* Telas estreitas: tudo em uma coluna e volta ao comportamento normal */
+@media (max-width: 1000px) {
+  .h-grade { grid-template-columns: 1fr; }
+  .h-registro { contain: none; max-height: 520px; }
+  .g-abertos { grid-template-columns: 1fr; }
+}   

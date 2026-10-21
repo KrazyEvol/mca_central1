@@ -1,0 +1,19 @@
+/* Linhas extras dentro dos cartões do Painel principal (mín/méd/máx, limites e provável causa do gás).
+   Arquivo SEPARADO: não altera o seu CSS nem o zz_mca_extras.css (Histórico). */
+
+.cartao-extra {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #262D38;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.extra-linha {
+  font-size: 11px;
+  line-height: 1.4;
+  color: #8B95A3;
+  font-variant-numeric: tabular-nums;
+}
+.extra-limite { color: #6F7886; }
+.extra-causa  { color: #D4AF37; }
